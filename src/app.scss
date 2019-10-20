@@ -1,0 +1,95 @@
+$primaryDark: #282c34;
+$primaryYellow: #f3ce13;
+$primaryWhite: #fff;
+
+.App {
+  text-align: center;
+  background-color: $primaryDark;
+  min-height: 100vh;
+}
+
+.App-header {
+  padding-top: 10vh;
+}
+
+.App-button {
+  background-color: $primaryDark;
+}
+
+// Search bar component
+.Search {
+  width: 50%;
+  display: flex;
+  margin: 5vh auto;
+
+  .Search-input {
+    width: 100%;
+    border: 3px solid $primaryYellow;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #000;
+  }
+
+  .Search-input:focus {
+    color: #000;
+  }
+
+  .Search-button {
+    width: 40px;
+    height: 36px;
+    border: 1px solid $primaryYellow;
+    background: $primaryYellow;
+    text-align: center;
+    color: #000;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+}
+
+.Movies {
+  color: $primaryWhite;
+  text-align: left;
+  padding: 2rem;
+
+  .Movies-block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+  }
+
+  .Movies-category {
+    margin-bottom: 0rem;
+  }
+
+  // Indvidual Movies Tiles
+  .Movie-tile {
+    width: 200px;
+    margin-top: 2rem;
+
+    .Movie-image {
+      border-radius: 10%;
+      width: 80%;
+      height: 75%;
+    }
+
+    .Movie-title {
+      width: 80%;
+      font-weight: 600;
+      margin: 0.25rem auto;
+      text-align: left;
+    }
+
+    .Movie-date {
+      width: 80%;
+      color: #d3d3d3;
+      margin: 0.25rem auto;
+      text-align: left;
+      font-size: 0.85rem;
+    }
+  }
+}
