@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import './app.sass'
+import './app.scss'
 import Home from './pages/Home';
 
 const key = "10ed85ef914c6fcc68550f543b4fceb6"
