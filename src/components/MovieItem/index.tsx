@@ -19,4 +19,3 @@ const MoviesItem = (props: MovieItemInterface) => {
 }
 
 export default MoviesItem;
-
