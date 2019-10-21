@@ -1,12 +1,10 @@
 import React from 'react'
 import {MovieItemInterface} from '../../interfaces';
 import UnavaliablePoster from '../../assets/unavailable.png'
+import moment from 'moment';
 
-// const MoviesItem = (props: MovieItemInterface) => {
 const MoviesItem = (props: MovieItemInterface) => {
-    console.log(props)
-
-  
+    let releaseDate = moment(props.movieInfo.release_date).format('MMMM YYYY');
 
     return (
         <div className="Movie-tile" onClick={()=> {
@@ -20,7 +18,7 @@ const MoviesItem = (props: MovieItemInterface) => {
             <img className="Movie-image" src={UnavaliablePoster} />}
 
             <p className="Movie-title">{props.movieInfo.original_title}</p>
-            <p className="Movie-date">{props.movieInfo        .release_date}</p>
+            <p className="Movie-date">{releaseDate}</p>
         </div>
     )
 }
