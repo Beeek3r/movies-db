@@ -4,7 +4,6 @@ const AppReducer = (state = intialState, action:any) => {
     switch (action.type) {
         
         case "FETCH_POPULAR_MOVIES_SUCCESS": 
-        console.log('inside reducer fetch popular')
             return {
                 ...state,
                 popularMoviesList: action.payload,
@@ -12,12 +11,19 @@ const AppReducer = (state = intialState, action:any) => {
             }
 
         case "QUERY_MOVIES": 
-        console.log(action.payload)
             return {
                 ...state,
                 queryMoviesList: action.payload,
                 popularMoviesView: false
             }
+
+        case "SELECT_MOVIE": 
+        console.log('selecting movie from reducer')
+            return {
+                ...state,
+                selectedMovie: action.payload
+            }
+
 
         default:
             console.log('default')

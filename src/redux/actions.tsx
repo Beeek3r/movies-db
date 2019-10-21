@@ -39,3 +39,10 @@ export const QUERY_MOVIES = (payload: any) => {
     }
 }
 
+// Selecting Movie
+export const SELECT_MOVIE = (movieInfo:any) => {
+    return {
+        type: "SELECT_MOVIE",
+        payload: movieInfo
+    }
+}

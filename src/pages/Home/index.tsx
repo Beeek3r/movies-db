@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import MovieItem from '../../components/MovieItem';
 import Searchbar from '../../components/Searchbar';
 import {MoviePageInterface} from '../../interfaces';
-import {FETCH_POPULAR_MOVIES_CREATOR, QUERY_MOVIES, QUERY_MOVIES_CREATOR} from '../../redux/actions';
+import {FETCH_POPULAR_MOVIES_CREATOR, QUERY_MOVIES, QUERY_MOVIES_CREATOR, SELECT_MOVIE} from '../../redux/actions';
 const axios = require('axios').default;
 
 // <any> make a interface for that as it specifices check the types on this home page
@@ -21,7 +21,8 @@ class Home extends React.Component <MoviePageInterface> {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} alt="Movies dB's logo" onClick={() => this.props.fetchPopularMovies()}/>
+          {/* Remove later */}
+          <img src={logo} alt="Movies dB's logo" onClick={() => this.props.fetchPopularMovies()}/> 
         </div>
 
         <Searchbar queryMovies={this.props.queryMovies}/>
@@ -31,9 +32,9 @@ class Home extends React.Component <MoviePageInterface> {
           <div className="Movies-block">
 
             {this.props.popularMoviesView ? 
-              this.props.popularMoviesList.map((movie) => <MovieItem {...movie}/>) 
+              this.props.popularMoviesList.map((movie) => <MovieItem movieInfo={movie} selectMovie={this.props.selectMovie} history={this.props.history}/>) 
               : 
-              this.props.queryMoviesList.map((movie) => <MovieItem {...movie}/>) }
+              this.props.queryMoviesList.map((movie) => <MovieItem movieInfo={movie} selectMovie={this.props.selectMovie} history={this.props.history}/>) }
 
           </div>
         </div>
@@ -51,7 +52,8 @@ class Home extends React.Component <MoviePageInterface> {
   const mapDispatchToProps = (dispatch:any) => {
     return {
       fetchPopularMovies: () => dispatch(FETCH_POPULAR_MOVIES_CREATOR()),
-      queryMovies: (query:string) => dispatch(QUERY_MOVIES_CREATOR(query))
+      queryMovies: (query:string) => dispatch(QUERY_MOVIES_CREATOR(query)),
+      selectMovie: (movieInfo:any) => dispatch(SELECT_MOVIE(movieInfo))
       }
     }
 

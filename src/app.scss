@@ -75,6 +75,12 @@ $primaryWhite: #fff;
       border-radius: 10%;
       width: 80%;
       height: 75%;
+
+      &:hover {
+        -webkit-box-shadow: 0 0 20px $primaryYellow;
+        box-shadow: 0 0 20px $primaryYellow;
+        cursor: pointer;
+      }
     }
 
     .Movie-title {
@@ -91,5 +97,47 @@ $primaryWhite: #fff;
       text-align: left;
       font-size: 0.85rem;
     }
+  }
+}
+
+// Movie Page
+.Movie-background-img {
+  min-height: 245px;
+  background-size: cover;
+  background-position: top;
+
+  @media screen and (min-width: 1224px) {
+    min-height: 400px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    min-height: 550px;
+  }
+}
+
+.Movie-info {
+  color: #fff;
+  max-width: 80%;
+  margin: auto;
+
+  @media screen and (min-width: 1224px) {
+    max-width: 70%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 60%;
+  }
+}
+
+.Movie-back-button {
+  color: #fff;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  font-size: 2rem;
+
+  &:hover {
+    color: $primaryYellow;
+    cursor: pointer;
   }
 }
