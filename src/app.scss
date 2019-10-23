@@ -119,6 +119,7 @@ $primaryWhite: #fff;
   color: #fff;
   max-width: 80%;
   margin: auto;
+  min-height: 250px;
 
   @media screen and (min-width: 1224px) {
     max-width: 70%;
@@ -128,6 +129,8 @@ $primaryWhite: #fff;
     max-width: 60%;
   }
 }
+
+// Movie Page
 
 .Movie-back-button {
   color: #fff;
@@ -141,5 +144,53 @@ $primaryWhite: #fff;
   &:hover {
     color: $primaryYellow;
     cursor: pointer;
+  }
+}
+
+.Movie-page-img-wrapper {
+  position: relative;
+  width: 150px;
+
+  .Movie-page-img {
+    position: absolute;
+    width: 150px;
+    height: 250px;
+    top: -50px;
+    border-radius: 10%;
+    -webkit-box-shadow: 0 0 20px #000;
+    box-shadow: 0 0 20px #000;
+    background-size: cover;
+  }
+}
+
+.Movie-page-info-wrapper {
+  flex: 2 1;
+  text-align: left;
+  padding-left: 5%;
+
+  @media screen and (min-width: 1224px) {
+    padding-left: 15%;
+  }
+}
+
+.Movie-page-movie-info {
+  font-size: 0.85rem;
+  color: #d3d3d3;
+  line-height: 2;
+}
+
+.Movie-page-overview {
+  color: #fff;
+  text-align: left;
+  max-width: 80%;
+  margin: 50px auto auto auto;
+  padding-bottom: 50px;
+
+  @media screen and (min-width: 1224px) {
+    max-width: 70%;
+  }
+
+  @media screen and (min-width: 1440px) {
+    max-width: 60%;
   }
 }
