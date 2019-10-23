@@ -74,6 +74,7 @@ $primaryWhite: #fff;
   .Movie-tile {
     width: 200px;
     margin-top: 2rem;
+    position: relative;
 
     .Movie-image {
       border-radius: 10%;
@@ -85,6 +86,26 @@ $primaryWhite: #fff;
         box-shadow: 0 0 20px $primaryYellow;
         cursor: pointer;
       }
+    }
+
+    .Movie-upvote {
+      // background: green;
+      border-radius: 25%;
+      position: absolute;
+      padding: 2px 3px;
+      font-size: 0.8rem;
+      top: 10px;
+      left: 30px;
+    }
+
+    .Movie-upvote-low {
+      background: #5a5a5a;
+    }
+    .Movie-upvote-med {
+      background: #ff5733;
+    }
+    .Movie-upvote-high {
+      background: #00be03;
     }
 
     .Movie-title {
