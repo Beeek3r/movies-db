@@ -18,9 +18,13 @@ $primaryWhite: #fff;
 
 // Search bar component
 .Search {
-  width: 50%;
+  width: 80%;
   display: flex;
   margin: 5vh auto;
+
+  @media screen and (min-width: 992px) {
+    width: 50%;
+  }
 
   .Search-input {
     width: 100%;
@@ -120,6 +124,8 @@ $primaryWhite: #fff;
   max-width: 80%;
   margin: auto;
   min-height: 250px;
+  display: flex;
+  border-bottom: 1px solid #373d48;
 
   @media screen and (min-width: 1224px) {
     max-width: 70%;
@@ -134,10 +140,11 @@ $primaryWhite: #fff;
 
 .Movie-back-button {
   color: #fff;
-  position: absolute;
-  left: 20px;
-  top: 20px;
+  position: fixed;
+  left: 15px;
+  top: 15px;
   font-size: 2.5rem;
+  z-index: 10;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #f3ce13;
 
@@ -177,6 +184,17 @@ $primaryWhite: #fff;
   font-size: 0.85rem;
   color: #d3d3d3;
   line-height: 2;
+}
+
+.Movie-page-movie-info {
+  font-size: 0.85rem;
+  color: #d3d3d3;
+  line-height: 2;
+}
+
+.Movie-page-movie-info-subtitle {
+  font-weight: 500;
+  color: #fff;
 }
 
 .Movie-page-overview {

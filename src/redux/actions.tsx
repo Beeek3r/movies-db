@@ -25,7 +25,6 @@ export const QUERY_MOVIES_CREATOR = (searchQuery:string) => {
             let encodedSearchQuery = encodeURIComponent(searchQuery);
             axios(`https://api.themoviedb.org/3/search/movie?api_key=10ed85ef914c6fcc68550f543b4fceb6&query=${encodedSearchQuery}&page=1`)
             .then((res:any) => {
-                console.log(res);
                 dispatch(QUERY_MOVIES(res.data.results));
             })
         }
